@@ -1,0 +1,130 @@
+.account-page {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+.account-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.account-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.account-card__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #edf4ed;
+}
+
+.account-welcome {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.account-avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.account-avatar__img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.account-avatar__upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.account-avatar__label {
+    font-size: 14px;
+    color: #666;
+}
+
+.account-avatar__input {
+    font-size: 14px;
+}
+
+.account-form {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.account-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.account-form__label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.account-form__input {
+    padding: 0.75rem 1rem;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.2s ease;
+}
+
+.account-form__input:focus {
+    border-color: #0091ff;
+    outline: none;
+}
+
+.account-form__submit {
+    margin-top: 1rem;
+    padding: 0.75rem 2rem;
+    font-size: 14px;
+    background-color: #0091ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.account-form__submit:hover {
+    background-color: #0077cc;
+}
+
+.account-success {
+    text-align: center;
+    padding: 1rem;
+    background-color: #d4edda;
+    border-radius: 4px;
+    color: #155724;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 576px) {
+    .account-card {
+        padding: 1.5rem;
+    }
+
+    .account-avatar__img {
+        width: 150px;
+        height: 150px;
+    }
+}
