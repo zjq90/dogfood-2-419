@@ -1,0 +1,110 @@
+.article-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.article-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.article-card__header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.article-card__author-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.article-card__author-name {
+    font-size: 14px;
+    color: #666;
+}
+
+.article-card__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.article-card__title a {
+    color: #333;
+    text-decoration: none;
+}
+
+.article-card__title a:hover {
+    color: #0091ff;
+}
+
+.article-card__content {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    max-height: 80px;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+}
+
+.article-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+    color: #999;
+}
+
+.article-card__stats {
+    display: flex;
+    gap: 1rem;
+}
+
+.article-card__time {
+    color: #999;
+}
+
+.article-card__actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.article-card__action {
+    color: #e74c3c;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.article-card__action:hover {
+    text-decoration: underline;
+}
+
+.page-subtitle {
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
+    margin-left: 0.5rem;
+}
+
+@media (max-width: 576px) {
+    .article-card__footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .article-card__actions {
+        margin-top: 0.5rem;
+    }
+}

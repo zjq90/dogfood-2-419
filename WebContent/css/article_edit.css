@@ -1,0 +1,314 @@
+.editor-page {
+    min-height: 100vh;
+    background-color: #fafafa;
+}
+
+.editor-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e5e5e5;
+    height: 56px;
+}
+
+.editor-nav__inner {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.editor-nav__logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.editor-nav__logo img {
+    height: 40px;
+    width: auto;
+}
+
+.editor-nav__title {
+    font-size: 18px;
+    font-weight: 400;
+    color: #bdbdbd;
+    margin: 0;
+}
+
+.editor-nav__action {
+    display: inline-block;
+    padding: 8px 24px;
+    background-color: #3db04d;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.editor-nav__action:hover {
+    background-color: #2d9a3d;
+    color: #fff;
+}
+
+.editor-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 80px 1rem 2rem;
+}
+
+.editor-title-input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    border: none;
+    border-bottom: 1px solid #eee;
+    background-color: transparent;
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+.editor-title-input::placeholder {
+    color: #ccc;
+}
+
+.editor-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px 8px 0 0;
+}
+
+.editor-toolbar__btn {
+    padding: 6px 12px;
+    font-size: 13px;
+    color: #666;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.editor-toolbar__btn:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.editor-content {
+    min-height: 400px;
+    padding: 1.5rem;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    font-size: 15px;
+    line-height: 1.8;
+    outline: none;
+}
+
+.editor-content:focus {
+    box-shadow: 0 0 0 2px rgba(0, 145, 255, 0.1);
+}
+
+.editor-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 200;
+    display: none;
+}
+
+.modal-overlay--active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    overflow: hidden;
+    display: none;
+}
+
+.modal--active {
+    display: block;
+}
+
+.modal__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.modal__title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+}
+
+.modal__close {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #666;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.modal__close:hover {
+    background-color: #e0e0e0;
+}
+
+.modal__body {
+    padding: 1.5rem;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.group-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.group-input {
+    flex: 1;
+    min-width: 150px;
+}
+
+.group-input__field {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.group-input__field:focus {
+    border-color: #0091ff;
+}
+
+.group-select {
+    width: 100%;
+    padding: 1rem;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    outline: none;
+    min-height: 200px;
+}
+
+.group-select option {
+    padding: 0.5rem;
+}
+
+.modal__footer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-top: 1px solid #e5e5e5;
+}
+
+.modal__btn {
+    padding: 10px 32px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.modal__btn--secondary {
+    background-color: #fff;
+    color: #666;
+    border: 1px solid #ccc;
+}
+
+.modal__btn--secondary:hover {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.modal__btn--primary {
+    background-color: #34a44f;
+    color: #fff;
+    border: none;
+}
+
+.modal__btn--primary:hover {
+    background-color: #2d9144;
+    color: #fff;
+}
+
+@media (max-width: 576px) {
+    .editor-nav__title {
+        display: none;
+    }
+
+    .editor-container {
+        padding: 72px 0.75rem 1.5rem;
+    }
+
+    .editor-title-input {
+        font-size: 1.5rem;
+    }
+
+    .editor-toolbar {
+        gap: 0.25rem;
+    }
+
+    .editor-toolbar__btn {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+
+    .group-inputs {
+        flex-direction: column;
+    }
+
+    .group-input {
+        min-width: 100%;
+    }
+}

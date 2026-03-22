@@ -1,38 +1,34 @@
-.login-page {
+.register-page {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     padding: 2rem;
-    background-image: url('http://47.102.212.18/iDouBan/image/portrait/登录背景设置.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: #22C3AA;
+    background-color: #daecda;
 }
 
-.login-card {
+.register-card {
     background-color: #f8f8f8;
     width: 100%;
-    max-width: 400px;
-    border-radius: 15px;
+    max-width: 420px;
+    border-radius: 20px;
     padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.login-card__title {
+.register-card__title {
     text-align: center;
-    padding: 1rem 0 1.5rem;
+    padding: 0.5rem 0 1.5rem;
     color: #2ca160;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
-.login-form__group {
+.register-form__group {
     margin-bottom: 1rem;
 }
 
-.login-form__input {
+.register-form__input {
     width: 100%;
     height: 42px;
     padding: 0 12px;
@@ -43,34 +39,17 @@
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.login-form__input:focus {
+.register-form__input:focus {
     border-color: #0091ff;
     box-shadow: 0 0 0 3px rgba(0, 145, 255, 0.1);
     outline: none;
 }
 
-.login-form__options {
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
+.register-form__input--error {
+    border-color: #e74c3c;
 }
 
-.login-form__checkbox {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 14px;
-    color: #666;
-    cursor: pointer;
-}
-
-.login-form__checkbox input {
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-}
-
-.login-form__submit {
+.register-form__submit {
     width: 100%;
     height: 42px;
     background-color: #0091ff;
@@ -80,35 +59,35 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    margin-top: 0.5rem;
 }
 
-.login-form__submit:hover,
-.login-form__submit:focus {
+.register-form__submit:hover,
+.register-form__submit:focus {
     background-color: #0077cc;
 }
 
-.login-form__links {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
+.register-form__footer {
+    text-align: center;
+    margin-top: 1.5rem;
     padding-top: 1rem;
     border-top: 1px solid #eee;
 }
 
-.login-form__link {
+.register-form__link {
     color: #0091ff;
     font-size: 14px;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
-.login-form__link:hover,
-.login-form__link:focus {
+.register-form__link:hover,
+.register-form__link:focus {
     color: #0077cc;
     text-decoration: underline;
 }
 
-.login-form__error {
+.register-form__error {
     margin-top: 1rem;
     padding: 0.75rem;
     background-color: #fff5f5;
@@ -119,18 +98,18 @@
     text-align: center;
 }
 
+.register-form__hint {
+    font-size: 12px;
+    color: #999;
+    margin-top: 0.25rem;
+}
+
 @media (max-width: 576px) {
-    .login-page {
-        justify-content: center;
+    .register-page {
         padding: 1rem;
     }
 
-    .login-card {
+    .register-card {
         padding: 1.5rem;
-    }
-
-    .login-form__options {
-        flex-direction: column;
-        gap: 0.75rem;
     }
 }
