@@ -1,233 +1,95 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<title>登录豆瓣</title>
-<link rel="icon" href="http://img.linzworld.cn/img/douban_favicon.ico" type="image/x-icon">
-
-<style type="text/css">
-body {
-	margin: 0;
-	background-image: url('http://47.102.212.18/iDouBan/image/portrait/登录背景设置.jpg');
-	background-repeat:no-repeat;
-        background-position:0% 0%;
-	background-size:contain;
-	background-color: #22C3AA;
-}
-</style>
-<!-- 背景图片的设置 CSS  初始化css -->
-<style type="text/css">
-/*样式初始化*/
-		*{
-			margin:0;
-			padding:0;/*清除内外边距*/
-		}
-		ul{
-			list-style:none;/*去掉列表中的样式的小点*/
-		}
-		.clearfix:before,.clear:after{/*清除浮动*/
-			display:table;
-			content:"";
-		}
-		.clearfix:after{
-			clear:both;
-		}
-		.clearfix{
-			*zoom:1;
-		}
-		 body{
-		   background:url())  no-repeat center center;
-		   background-size:cover;
-		   background-attachment:fixed;
-		   background-color:#edf4ed;
-		
-		}
-		 a:link,a:visited{/*去掉下划线*/
-		  text-decoration:none;
-		  } 
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="登录iDouBan社交分享平台">
+    <title>登录豆瓣</title>
+    <link rel="icon" href="http://img.linzworld.cn/img/douban_favicon.ico" type="image/x-icon">
+    <!-- 预加载关键CSS -->
+    <link rel="preload" href="${pageContext.request.contextPath}/css/common.css" as="style">
+    <link rel="preload" href="${pageContext.request.contextPath}/css/components.css" as="style">
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/common.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/layout.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/components.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/pages.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/responsive.css">
 </head>
-<style type="text/css">
-/*绝对定位*/
-#login {
-    background-color: #f8f8f8;
-    width: 400px;
-    height: 400px;
-    float: right;
-    margin-right: 100px;
-    border-radius: 15px;
-    margin-top: 150px;
-}
-/*登录标题*/
-#header_h1{
-	 padding: 20px 128px;
-	 color: #2ca160;
-     font-color: green;
-}
-/*对表单元素中的input的输入框进行统一格式处理*/
-/*对齐中长方形*/
-#uname,#upwd {
-    margin-bottom: 10px;
-    outline: none;
-    border-radius: 3px;
-    text-decoration: none;
-    border-style: none;
-    width: 300px;
-    height: 42px;
-    display: block;/*显示为块级元素，此元素前后会带有换行符*/
-    color: black;
-    font-size: 14px;
-}
-
-#uname,#upwd{/*输入框的初始化布局设置*/
-    background-color: ;
-    padding-left: 10px;
-
-}
-/*登录按钮的样式*/
-#entry{
-    background-color: #0091ff;
-          width: 300px;
-    height: 42px;
-    margin-bottom: 10px;
-    margin-left:50px;
+<body>
+    <main class="login-page" role="main">
+        <section class="auth-card" aria-labelledby="login-title">
+            <h1 id="login-title" class="auth-card__title">登录豆瓣</h1>
+            
+            <form action="${pageContext.request.contextPath}/LoginServlet" method="post" id="login-form" novalidate>
+                <fieldset>
+                    <legend class="sr-only">登录表单</legend>
+                    
+                    <div class="form-group">
+                        <label for="uname" class="sr-only">用户名</label>
+                        <input 
+                            type="text" 
+                            id="uname" 
+                            name="uname" 
+                            class="auth-card__input" 
+                            value="${cookie.uname.value}" 
+                            placeholder="请输入用户名"
+                            required
+                            autocomplete="username"
+                            aria-required="true"
+                            aria-describedby="uname-error"
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="upwd" class="sr-only">密码</label>
+                        <input 
+                            type="password" 
+                            id="upwd" 
+                            name="upwd" 
+                            class="auth-card__input" 
+                            value="${cookie.upwd.value}" 
+                            placeholder="请输入密码"
+                            required
+                            autocomplete="current-password"
+                            aria-required="true"
+                            aria-describedby="upwd-error"
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input type="checkbox" name="auto" id="auto" class="form-check__input">
+                            <label for="auto" class="form-check__label">自动登录</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="remember" id="remember" class="form-check__input">
+                            <label for="remember" class="form-check__label">记住密码</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="auth-card__btn" id="login-btn">登录</button>
+                    </div>
+                    
+                    <c:if test="${not empty requestScope.errorMsg}">
+                        <div class="alert alert--danger" role="alert" aria-live="polite">
+                            ${requestScope.errorMsg}
+                        </div>
+                    </c:if>
+                </fieldset>
+            </form>
+            
+            <nav class="auth-card__links" aria-label="辅助链接">
+                <a href="${pageContext.request.contextPath}/jsp/send_mail.jsp" class="auth-card__link">忘记密码</a>
+                <a href="${pageContext.request.contextPath}/jsp/register.jsp" class="auth-card__link">注册账号</a>
+            </nav>
+        </section>
+    </main>
     
-    outline: none;
-    border-radius: 3px;
-    
-    
-    text-decoration: none;
-    border-style: none;
-    font-size: 14px;
-}
-
-/*输入框被点击时发生反应*/
-#uname:focus {
-    background: white;/*输入框背景颜色*/
-    border: 1px solid grey;/*边框大小和颜色*/
-}
-
-#upwd:focus {
-    background: white;
-    border: 1px solid grey;
-}
-#entry:hover{
-    background: blue;
-}
-
-/*div的设置统一长方形方块*/
-.login_level{
-	 width: 350px;
-	 height: 50px;
-	 margin-left:50px;
-	 center:center;
-}
-/*三个按钮*/
-#select{
-	 width: 350px;
-	 height: 30px;
-	 margin-left:50px;
-	 center:center;
-
-}
-
-/*底部两个链接的位置*/
-#login_bottom_find{
-
-      margin-left: 50px;
-    
-    border-style: none;
-    width: 300px;
-    height: 42px;
-    color: black;
-    font-size: 14px;
-}
-#login_bottom_sign{
-  color:blue;
-      margin-left:180px;
-    border-style: none;
-    width: 300px;
-    height: 42px;
-    color: black;
-    font-size: 14px;
-}
-
-
-
-
-</style>
-<form action="/iDouBan/LoginServlet" method="post" id="login_form">
-<%-- <font color="red">${requestScope.message}</font> --%>
-<div id="login">
-		<div ><h1 id="header_h1">登录豆瓣</h1>
-		    </div>
-<!-- 登录的长方形界面框 -->
-	<div id="name" class="login_level">
-	<!-- 获取cookie中的对象的值 -->
-	   <input type="text" id="uname"   name="uname"  value="${cookie.uname.value}" placeholder="请输入用户名">
-	   
-	 </div>
-	 <div id="pwd" class="login_level">  
-	   <input type="password" id="upwd" name="upwd"  value="${cookie.upwd.value}"  placeholder="请输入密码" > 
-	   
-	 </div>
-	 
-	 <div  id="select"> 
-		 <label>
-			    <input type="checkbox" name="auto" id="auto"/>自动登录 
-	     </label>
-	      <label>
-			    <input type="checkbox" name="remember" value="" id="remember"/>记住密码
-		 </label>
-	 </div>
-		 <div>
-			    <input type="button" onclick="check()" value="登录" id="entry" />
-		</div>
-		
-		<!-- 自动登录的功能 -->
-		
-		<div>
-			    <a href="http://47.102.212.18/iDouBan/jsp/register.jsp" id="login_bottom_find"><font color=blue>忘记密码</font></a>
-				<a href="http://47.102.212.18/iDouBan/jsp/register.jsp" id="login_bottom_sign"><font color=blue>注册账号</font></a>
-	    </div>
-	    <!-- 表单输入数据给后台，返回的错误的消息提示功能 -->
-	    <div id="msg" class="login_level">
-	    	<!-- 提示信息 -->
-	    	<font color="red" >${requestScope.errorMsg}</font> 
-	    	  <%-- <!-- 提示信息 --><font color="red">${requestScope.imageMsg}</font> --%>
-	    	  <%--  <!-- 提示信息 --><font color="red">${requestScope.pwdError}</font> --%> 
-	    </div>
-	    
-	    
-	</div>
-</form>
-
-<!--  自动登录按钮被点击后 非空判断  -->
-<c:if test="${not empty cookie.auto.value}">
-<!-- 重定位到登陆界面 -->
-	 <c:redirect url="http://47.102.212.18/iDouBan/jsp/alter.jsp" />
-</c:if>
-
-
- <!-- JS代码-->
-	<script type="text/javascript">
-     //检查用户输入是否为空
-    function check(){
-        var username = document.getElementById("uname")
-        var password = document.getElementById("upwd")
-        if(username.value == ""){
-            alert("请输入用户名")
-        }else if(password.value == ""){
-            alert("请输入密码")
-        }else{
-            document.forms[0].submit()
-        }
-    }
-	</script>
-
-	
+    <!-- 公共JS -->
+    <script src="${pageContext.request.contextPath}/js/common.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,467 @@
+@charset "UTF-8";
+
+/* ============================================
+   组件样式
+   ============================================ */
+
+/* 按钮组件 */
+.btn {
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.btn:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+.btn--primary {
+    color: #fff;
+    background-color: #0091ff;
+    border-color: #0091ff;
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+    background-color: #0066cc;
+    border-color: #0066cc;
+}
+
+.btn--success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn--success:hover,
+.btn--success:focus {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+.btn--danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn--danger:hover,
+.btn--danger:focus {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+.btn--secondary {
+    color: #333;
+    background-color: #e0e0e0;
+    border-color: #e0e0e0;
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus {
+    background-color: #d0d0d0;
+    border-color: #d0d0d0;
+}
+
+.btn--outline {
+    color: #007722;
+    background-color: transparent;
+    border-color: #007722;
+}
+
+.btn--outline:hover,
+.btn--outline:focus {
+    color: #fff;
+    background-color: #007722;
+}
+
+.btn--small {
+    padding: 4px 12px;
+    font-size: 12px;
+}
+
+.btn--large {
+    padding: 12px 30px;
+    font-size: 16px;
+}
+
+.btn--block {
+    display: block;
+    width: 100%;
+}
+
+/* 表单组件 */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-input::placeholder {
+    color: #999;
+}
+
+.form-input--error {
+    border-color: #dc3545;
+}
+
+.form-input--error:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.form-hint {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.form-error {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: #dc3545;
+}
+
+/* 复选框和单选框 */
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.form-check__input {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.form-check__label {
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+/* 卡片组件 */
+.card {
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card__header {
+    padding: 1rem 1.25rem;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.card__title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.card__body {
+    padding: 1.25rem;
+}
+
+.card__footer {
+    padding: 1rem 1.25rem;
+    background-color: #f8f8f8;
+    border-top: 1px solid #e8e8e8;
+}
+
+/* 登录/注册卡片 */
+.auth-card {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.auth-card__title {
+    text-align: center;
+    color: #2ca160;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.auth-card__input {
+    width: 100%;
+    height: 42px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 14px;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.auth-card__input:focus {
+    background-color: #fff;
+    border-color: #999;
+}
+
+.auth-card__btn {
+    width: 100%;
+    height: 42px;
+    background-color: #0091ff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.auth-card__btn:hover {
+    background-color: #0066cc;
+}
+
+.auth-card__links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.auth-card__link {
+    color: #007bff;
+    font-size: 14px;
+}
+
+.auth-card__link:hover {
+    text-decoration: underline;
+}
+
+/* 消息提示组件 */
+.alert {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert--success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert--danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert--warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.alert--info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+/* 标签组件 */
+.tag {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+.tag--primary {
+    color: #fff;
+    background-color: #007bff;
+}
+
+.tag--success {
+    color: #fff;
+    background-color: #28a745;
+}
+
+.tag--danger {
+    color: #fff;
+    background-color: #dc3545;
+}
+
+/* 头像组件 */
+.avatar {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.avatar--small {
+    width: 32px;
+    height: 32px;
+}
+
+.avatar--large {
+    width: 60px;
+    height: 60px;
+}
+
+.avatar--xlarge {
+    width: 100px;
+    height: 100px;
+}
+
+/* 列表组件 */
+.list-group {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.list-group__item {
+    position: relative;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-bottom: none;
+}
+
+.list-group__item:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.list-group__item:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.list-group__item:hover {
+    background-color: #f8f8f8;
+}
+
+/* 文章卡片 */
+.article-card {
+    padding: 20px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.article-card__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #007722;
+    margin-bottom: 10px;
+}
+
+.article-card__meta {
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.article-card__summary {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 操作链接 */
+.action-link {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 13px;
+    color: #333;
+    background-color: #f0f0f0;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+.action-link:hover {
+    background-color: #e0e0e0;
+}
+
+.action-link--primary {
+    color: #fff;
+    background-color: #007722;
+}
+
+.action-link--primary:hover {
+    background-color: #006622;
+}
+
+/* 分隔线 */
+.divider {
+    height: 1px;
+    margin: 1rem 0;
+    background-color: #e8e8e8;
+    border: 0;
+}
+
+/* 空状态 */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-state__icon {
+    font-size: 48px;
+    color: #ccc;
+    margin-bottom: 16px;
+}
+
+.empty-state__text {
+    font-size: 14px;
+    color: #999;
+}
