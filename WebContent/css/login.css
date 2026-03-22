@@ -1,1 +1,81 @@
 @charset "UTF-8";
+/* 登录页面样式 */
+
+.login-page {
+    min-height: 100vh;
+    background-color: #22C3AA;
+    background-image: url('../image/portrait/登录背景设置.jpg');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 5%;
+}
+
+.login-card__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2ca160;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-form__options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #666;
+}
+
+.login-form__checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.login-form__checkbox input {
+    margin-right: 5px;
+}
+
+.login-card__links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.login-card__link {
+    color: #0091ff;
+}
+
+.login-card__link:hover {
+    color: #0077cc;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .login-page {
+        background-position: center top;
+        background-size: cover;
+        justify-content: center;
+    }
+
+    .login-card {
+        margin-right: 0;
+        margin-top: 100px;
+    }
+}

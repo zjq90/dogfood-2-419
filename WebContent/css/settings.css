@@ -1,0 +1,202 @@
+@charset "UTF-8";
+/* 账号管理/设置页面样式 */
+
+/* 容器 */
+.settings-container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 20px;
+    min-height: 800px;
+}
+
+.settings-main {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 页面标题 */
+.settings-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.settings-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.settings-welcome {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* 用户头像区域 */
+.settings-avatar {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.settings-avatar__preview {
+    margin-bottom: 20px;
+}
+
+.settings-avatar__img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.settings-avatar__upload {
+    margin-top: 15px;
+}
+
+.settings-avatar__input {
+    display: none;
+}
+
+.settings-avatar__label {
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #42bd56;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.settings-avatar__label:hover {
+    background-color: #3bb04e;
+}
+
+.settings-avatar__btn {
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #42bd56;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.settings-avatar__btn:hover {
+    background-color: #3bb04e;
+}
+
+/* 表单区域 */
+.settings-form {
+    margin-top: 30px;
+}
+
+.settings-form__group {
+    margin-bottom: 20px;
+}
+
+.settings-form__label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.settings-form__input {
+    width: 100%;
+    height: 42px;
+    padding: 0 15px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.settings-form__input:focus {
+    outline: none;
+    border-color: #42bd56;
+    box-shadow: 0 0 0 2px rgba(66, 189, 86, 0.1);
+}
+
+.settings-form__input--textarea {
+    height: 100px;
+    padding: 12px 15px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.settings-form__submit {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.settings-form__btn {
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #42bd56;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.settings-form__btn:hover {
+    background-color: #3bb04e;
+}
+
+/* 成功提示 */
+.settings-success {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #edf4ed;
+    border: 1px solid #42bd56;
+    border-radius: 4px;
+    color: #42bd56;
+    text-align: center;
+}
+
+/* 错误提示 */
+.settings-error {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff5f5;
+    border: 1px solid #ca0c16;
+    border-radius: 4px;
+    color: #ca0c16;
+    text-align: center;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .settings-container {
+        padding: 0 15px;
+    }
+
+    .settings-main {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .settings-avatar__img {
+        width: 150px;
+        height: 150px;
+    }
+}

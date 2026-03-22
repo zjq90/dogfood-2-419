@@ -1,0 +1,346 @@
+/* 豆邮页面样式 */
+.doumail-container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: #ffffff;
+    min-height: 800px;
+}
+
+.doumail-main {
+    padding: 20px 0;
+}
+
+.doumail-header {
+    padding: 15px 0;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 20px;
+}
+
+.doumail-title {
+    font-size: 24px;
+    color: #333;
+    font-weight: normal;
+}
+
+/* 豆邮列表 */
+.doumail-list {
+    margin-bottom: 30px;
+}
+
+.doumail-list__title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* 豆邮项 */
+.doumail-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    border: 1px solid #e6e6e6;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: box-shadow 0.2s;
+}
+
+.doumail-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.doumail-item--unread {
+    background-color: #f9f9f9;
+    border-left: 3px solid #42bd56;
+}
+
+.doumail-item__avatar {
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.doumail-item__avatar-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.doumail-item__content {
+    flex: 1;
+    min-width: 0;
+}
+
+.doumail-item__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.doumail-item__sender {
+    font-size: 14px;
+    color: #3377aa;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.doumail-item__sender:hover {
+    color: #118855;
+}
+
+.doumail-item__time {
+    font-size: 12px;
+    color: #999;
+}
+
+.doumail-item__preview {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.doumail-item__actions {
+    display: flex;
+    gap: 10px;
+}
+
+.doumail-item__action {
+    font-size: 12px;
+    color: #3377aa;
+    text-decoration: none;
+    padding: 4px 8px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    transition: all 0.2s;
+}
+
+.doumail-item__action:hover {
+    background-color: #3377aa;
+    color: #fff;
+    border-color: #3377aa;
+}
+
+.doumail-item__action--delete {
+    color: #d9534f;
+}
+
+.doumail-item__action--delete:hover {
+    background-color: #d9534f;
+    border-color: #d9534f;
+}
+
+/* 豆邮对话 */
+.doumail-conversation {
+    margin-bottom: 30px;
+}
+
+.doumail-conversation__partner {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.doumail-conversation__partner a {
+    color: #3377aa;
+    text-decoration: none;
+}
+
+.doumail-conversation__partner a:hover {
+    color: #118855;
+}
+
+/* 消息项 */
+.message-item {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 12px;
+}
+
+.message-item--sent {
+    flex-direction: row-reverse;
+}
+
+.message-item__avatar {
+    flex-shrink: 0;
+}
+
+.message-item__avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.message-item__content {
+    max-width: 70%;
+}
+
+.message-item__bubble {
+    padding: 12px 16px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    position: relative;
+}
+
+.message-item--sent .message-item__bubble {
+    background-color: #e8f5e9;
+}
+
+.message-item__text {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    word-break: break-all;
+}
+
+.message-item__time {
+    font-size: 12px;
+    color: #999;
+    margin-top: 6px;
+}
+
+.message-item--sent .message-item__time {
+    text-align: right;
+}
+
+/* 发送豆邮表单 */
+.doumail-form {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.doumail-form__group {
+    margin-bottom: 15px;
+}
+
+.doumail-form__label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.doumail-form__textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.6;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.doumail-form__textarea:focus {
+    outline: none;
+    border-color: #3377aa;
+    box-shadow: 0 0 0 2px rgba(51, 119, 170, 0.1);
+}
+
+.doumail-form__submit {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.doumail-form__btn {
+    padding: 8px 20px;
+    background-color: #3377aa;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.doumail-form__btn:hover {
+    background-color: #266088;
+}
+
+/* 空状态 */
+.doumail-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+}
+
+.doumail-empty__icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.doumail-empty__text {
+    font-size: 14px;
+}
+
+/* 分页 */
+.doumail-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.doumail-pagination__info {
+    font-size: 14px;
+    color: #666;
+}
+
+.doumail-pagination__links {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.doumail-pagination__link {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #3377aa;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.doumail-pagination__link:hover {
+    background-color: #3377aa;
+    color: #fff;
+    border-color: #3377aa;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .doumail-container {
+        padding: 0 15px;
+    }
+    
+    .doumail-item {
+        flex-direction: column;
+    }
+    
+    .doumail-item__avatar {
+        margin-bottom: 10px;
+    }
+    
+    .message-item__content {
+        max-width: 85%;
+    }
+}
