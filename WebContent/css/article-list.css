@@ -1,0 +1,281 @@
+@charset "UTF-8";
+/* 文章列表页面样式 */
+
+/* 主内容区域 */
+.article-container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: #ffffff;
+    min-height: 1000px;
+}
+
+.article-main {
+    width: 100%;
+    max-width: 820px;
+}
+
+/* 页面标题 */
+.page-header {
+    margin-bottom: 20px;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.page-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* 文章列表项 */
+.article-list {
+    margin-bottom: 30px;
+}
+
+.article-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.article-item:last-child {
+    border-bottom: none;
+}
+
+/* 文章头部 - 作者信息 */
+.article-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.author-avatar {
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.author-avatar__img {
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    display: block;
+}
+
+.author-name {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+}
+
+.author-name:hover {
+    color: #37a;
+    text-decoration: underline;
+}
+
+/* 文章中间内容 */
+.article-content-wrapper {
+    min-height: 100px;
+    overflow: hidden;
+}
+
+.article-cover {
+    float: left;
+    margin-right: 15px;
+}
+
+.article-cover__link {
+    display: block;
+}
+
+.article-text {
+    overflow: hidden;
+}
+
+.article-title {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.article-title__link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+}
+
+.article-title__link:hover {
+    color: #37a;
+    text-decoration: underline;
+}
+
+.article-summary {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    max-height: 80px;
+    overflow: hidden;
+}
+
+.article-time {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+}
+
+/* 文章底部 - 操作按钮 */
+.article-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #999;
+}
+
+.article-footer__item {
+    margin-right: 20px;
+}
+
+.article-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.article-action__btn {
+    font-size: 13px;
+    color: #ca0c16;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.article-action__btn:hover {
+    text-decoration: underline;
+}
+
+/* 分页 */
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+.pagination__info {
+    font-size: 13px;
+    color: #666;
+    margin-right: 20px;
+}
+
+.pagination__links {
+    display: flex;
+    gap: 5px;
+}
+
+.pagination__link {
+    display: inline-block;
+    padding: 5px 12px;
+    font-size: 13px;
+    color: #333;
+    background-color: #ff8c00;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.pagination__link:hover {
+    background-color: #ff7f00;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* 用户列表项样式 */
+.user-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ffd700;
+    background-color: #fff;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    margin: 10px 5px;
+}
+
+.user-avatar__img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.user-details {
+    margin-left: 10px;
+}
+
+.user-nickname {
+    font-size: 14px;
+    color: #072;
+    margin-bottom: 5px;
+}
+
+.user-signature {
+    font-size: 13px;
+    color: #666;
+}
+
+.user-actions {
+    margin-right: 30px;
+}
+
+.user-action {
+    color: #333;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.user-action:hover {
+    color: #37a;
+    text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .article-container {
+        padding: 0 15px;
+    }
+
+    .article-main {
+        width: 100%;
+    }
+
+    .pagination {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pagination__info {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .user-list-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-actions {
+        margin-top: 10px;
+        margin-right: 0;
+    }
+}
