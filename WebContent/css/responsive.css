@@ -1,0 +1,358 @@
+@charset "UTF-8";
+
+/* ============================================
+   响应式设计与媒体查询
+   ============================================ */
+
+/* 大屏设备 (1200px及以上) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .page-content {
+        grid-template-columns: 1fr 320px;
+    }
+}
+
+/* 中大屏设备 (992px - 1199px) */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .main-header__inner {
+        padding: 8px 20px;
+    }
+    
+    .navbar {
+        margin-left: 30px;
+    }
+}
+
+/* 平板设备 (768px - 991px) */
+@media (max-width: 991px) {
+    html {
+        font-size: 15px;
+    }
+    
+    .container {
+        max-width: 720px;
+    }
+    
+    .page-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .page-content__sidebar {
+        display: none;
+    }
+    
+    .main-header__inner {
+        flex-wrap: wrap;
+    }
+    
+    .navbar {
+        order: 3;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    
+    .navbar__list {
+        justify-content: center;
+    }
+    
+    .search-form {
+        margin-left: auto;
+    }
+    
+    .user-card {
+        padding: 12px;
+    }
+    
+    .user-card__avatar {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* 手机横屏 (576px - 767px) */
+@media (max-width: 767px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    
+    .top-nav {
+        height: auto;
+        padding: 5px 0;
+    }
+    
+    .top-nav__menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    
+    .top-nav__link {
+        padding: 4px 10px;
+        font-size: 11px;
+    }
+    
+    .main-header {
+        margin-bottom: 20px;
+    }
+    
+    .main-header__inner {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px;
+    }
+    
+    .logo {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .logo__img {
+        width: 140px;
+        height: auto;
+    }
+    
+    .navbar {
+        margin-top: 10px;
+    }
+    
+    .navbar__list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    
+    .navbar__link {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    
+    .search-form {
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    .search-form__input {
+        flex: 1;
+        width: auto;
+    }
+    
+    .page-content {
+        padding: 15px;
+        min-height: auto;
+    }
+    
+    .user-card {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .user-card__info {
+        width: calc(100% - 70px);
+    }
+    
+    .user-card__actions {
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: 5px;
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    .pagination__info {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    
+    .auth-card {
+        margin: 0 15px;
+        padding: 1.5rem;
+    }
+}
+
+/* 手机竖屏 (575px及以下) */
+@media (max-width: 575px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .top-nav__menu {
+        gap: 3px;
+    }
+    
+    .top-nav__link {
+        padding: 3px 8px;
+        font-size: 10px;
+    }
+    
+    .main-header__inner {
+        padding: 10px;
+    }
+    
+    .logo__img {
+        width: 120px;
+    }
+    
+    .navbar__link {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+    
+    .page-content {
+        padding: 10px;
+    }
+    
+    .user-card {
+        padding: 10px;
+    }
+    
+    .user-card__avatar {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .user-card__name {
+        font-size: 14px;
+    }
+    
+    .user-card__signature {
+        font-size: 12px;
+    }
+    
+    .btn {
+        padding: 6px 14px;
+        font-size: 13px;
+    }
+    
+    .pagination__link {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+    
+    .auth-card {
+        padding: 1.25rem;
+    }
+    
+    .auth-card__title {
+        font-size: 1.25rem;
+    }
+}
+
+/* 超小屏幕 (360px及以下) */
+@media (max-width: 360px) {
+    .navbar__list {
+        gap: 3px;
+    }
+    
+    .navbar__link {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+    
+    .user-card__actions {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+    .btn {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
+
+/* 打印样式 */
+@media print {
+    .top-nav,
+    .main-header,
+    .pagination,
+    .user-card__actions {
+        display: none !important;
+    }
+    
+    .page-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-content__sidebar {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    
+    a {
+        text-decoration: underline;
+        color: #000;
+    }
+    
+    .user-card {
+        break-inside: avoid;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+    .btn--primary {
+        border: 2px solid #000;
+    }
+    
+    .form-input {
+        border: 2px solid #000;
+    }
+    
+    .navbar__link:focus,
+    .btn:focus {
+        outline: 3px solid #000;
+        outline-offset: 2px;
+    }
+}
+
+/* 减少动画偏好 */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* 深色模式支持 (可选) */
+@media (prefers-color-scheme: dark) {
+    /* 如果需要深色模式，可以在这里添加 */
+}
+
+/* 横屏模式优化 */
+@media (orientation: landscape) and (max-height: 500px) {
+    .top-nav {
+        position: relative;
+    }
+    
+    .main-header {
+        margin-bottom: 15px;
+    }
+}
